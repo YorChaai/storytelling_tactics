@@ -3,13 +3,13 @@ cd ..
 echo ==========================================
 echo MEMBANGUN APLIKASI WINDOWS (.exe)
 echo ==========================================
-flutter build windows
+call flutter build windows
 echo.
 
 echo ==========================================
 echo MEMBANGUN APLIKASI ANDROID (.apk)
 echo ==========================================
-flutter build apk --release
+call flutter build apk --release
 echo.
 
 echo ==========================================

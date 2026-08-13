@@ -12,15 +12,15 @@ set /p platform="Masukkan pilihan Anda (1/2/3): "
 if "%platform%"=="1" (
     echo.
     echo Menjalankan di Windows...
-    flutter run -d windows
+    call flutter run -d windows
 ) else if "%platform%"=="2" (
     echo.
     echo Menjalankan di Web...
-    flutter run -d chrome
+    call flutter run -d chrome
 ) else if "%platform%"=="3" (
     echo.
     echo Menjalankan di Android...
-    flutter run
+    call flutter run
 ) else (
     echo.
     echo Pilihan tidak valid!
