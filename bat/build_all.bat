@@ -1,4 +1,5 @@
 @echo off
+cd ..
 echo ==========================================
 echo MEMBANGUN APLIKASI WINDOWS (.exe)
 echo ==========================================

@@ -1,4 +1,5 @@
 @echo off
+cd ..
 echo ==========================================
 echo PILIH PLATFORM UNTUK DIJALANKAN
 echo ==========================================

@@ -1,4 +1,5 @@
 @echo off
+cd ..
 echo ==========================================
 echo PERUBAHAN YANG DIBUAT (GIT DIFF):
 echo ==========================================
