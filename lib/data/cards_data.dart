@@ -1,0 +1,71 @@
+class TacticCard {
+  final String id;
+  final String name;
+  final String category;
+  final String imagePath;
+  final bool isDesertIsland;
+
+  const TacticCard({
+    required this.id,
+    required this.name,
+    required this.category,
+    required this.imagePath,
+    required this.isDesertIsland,
+  });
+}
+
+const List<TacticCard> allCards = [
+  TacticCard(id: "card_2", name: "Stories that Connect", category: "Recipe", imagePath: "asset/card/01. Recipe/recipe_storiesthatconnect.png", isDesertIsland: false),
+  TacticCard(id: "card_3", name: "Stories that Convince", category: "Recipe", imagePath: "asset/card/01. Recipe/recipe_storiesthatconvince.png", isDesertIsland: false),
+  TacticCard(id: "card_4", name: "Stories that Explain", category: "Recipe", imagePath: "asset/card/01. Recipe/recipe_storiesthatexplain.png", isDesertIsland: false),
+  TacticCard(id: "card_5", name: "Stories that Impress", category: "Recipe", imagePath: "asset/card/01. Recipe/recipe_storiesthatimpress.png", isDesertIsland: false),
+  TacticCard(id: "card_6", name: "Stories that Lead", category: "Recipe", imagePath: "asset/card/01. Recipe/recipe_storiesthatlead.png", isDesertIsland: false),
+  TacticCard(id: "card_7", name: "Stories that Motivate", category: "Recipe", imagePath: "asset/card/01. Recipe/recipe_storiesthatmotivate.png", isDesertIsland: false),
+  TacticCard(id: "card_8", name: "Stories that Sell", category: "Recipe", imagePath: "asset/card/01. Recipe/recipe_storiesthatsell.png", isDesertIsland: false),
+  TacticCard(id: "card_9", name: "Circle of Life", category: "Concept", imagePath: "asset/card/02. Concept/concept_circleoflife.png", isDesertIsland: false),
+  TacticCard(id: "card_10", name: "Curious Tales", category: "Concept", imagePath: "asset/card/02. Concept/concept_curioustales.png", isDesertIsland: false),
+  TacticCard(id: "card_11", name: "Good & Evil", category: "Concept", imagePath: "asset/card/02. Concept/concept_good&evil.png", isDesertIsland: false),
+  TacticCard(id: "card_12", name: "Order & Chaos", category: "Concept", imagePath: "asset/card/02. Concept/concept_order&chaos.png", isDesertIsland: false),
+  TacticCard(id: "card_13", name: "Rules, Cheats & Rebels", category: "Concept", imagePath: "asset/card/02. Concept/concept_rules,cheats&rebels.png", isDesertIsland: false),
+  TacticCard(id: "card_14", name: "Secrets & Puzzles", category: "Concept", imagePath: "asset/card/02. Concept/concept_secrets&puzzles.png", isDesertIsland: false),
+  TacticCard(id: "card_15", name: "Shock of the Old", category: "Concept", imagePath: "asset/card/02. Concept/concept_shockoftheold.png", isDesertIsland: false),
+  TacticCard(id: "card_16", name: "The Dragon & The City", category: "Concept", imagePath: "asset/card/02. Concept/concept_thedragon&thecity.png", isDesertIsland: true),
+  TacticCard(id: "card_17", name: "Three Great Conflicts", category: "Concept", imagePath: "asset/card/02. Concept/concept_threegreatconflicts.png", isDesertIsland: false),
+  TacticCard(id: "card_18", name: "Universal Stories", category: "Concept", imagePath: "asset/card/02. Concept/concept_universalstories.png", isDesertIsland: false),
+  TacticCard(id: "card_19", name: "Abstractions", category: "Explore", imagePath: "asset/card/03. Explore/explore_abstractions.png", isDesertIsland: false),
+  TacticCard(id: "card_20", name: "Data Detectives", category: "Explore", imagePath: "asset/card/03. Explore/explore_datadetectives.png", isDesertIsland: false),
+  TacticCard(id: "card_21", name: "Emotional Dashboard", category: "Explore", imagePath: "asset/card/03. Explore/explore_emotionaldashboard.png", isDesertIsland: false),
+  TacticCard(id: "card_22", name: "Social Proof", category: "Explore", imagePath: "asset/card/03. Explore/explore_socialproof.png", isDesertIsland: false),
+  TacticCard(id: "card_23", name: "Story Listening", category: "Explore", imagePath: "asset/card/03. Explore/explore_storylistening.png", isDesertIsland: true),
+  TacticCard(id: "card_24", name: "That's Funny", category: "Explore", imagePath: "asset/card/03. Explore/explore_thatsfunny.png", isDesertIsland: false),
+  TacticCard(id: "card_25", name: "Thoughtful Failures", category: "Explore", imagePath: "asset/card/03. Explore/explore_thoughtfulfailures.png", isDesertIsland: false),
+  TacticCard(id: "card_26", name: "Cut to the Chase", category: "Character", imagePath: "asset/card/04. charater/character_cuttothechase.png", isDesertIsland: false),
+  TacticCard(id: "card_27", name: "Drive Stories", category: "Character", imagePath: "asset/card/04. charater/character_drivestories.png", isDesertIsland: false),
+  TacticCard(id: "card_28", name: "Hero & Guide", category: "Character", imagePath: "asset/card/04. charater/character_hero&guide.png", isDesertIsland: false),
+  TacticCard(id: "card_29", name: "Trust Me, I'm an Expert", category: "Character", imagePath: "asset/card/04. charater/character_trustme,imanexpert.png", isDesertIsland: true),
+  TacticCard(id: "card_30", name: "What's It About?", category: "Character", imagePath: "asset/card/04. charater/character_whatsitabout.png", isDesertIsland: false),
+  TacticCard(id: "card_31", name: "What's My Motivation?", category: "Character", imagePath: "asset/card/04. charater/character_whatsmymotivation.png", isDesertIsland: false),
+  TacticCard(id: "card_32", name: "Icebreaker Stories", category: "Function", imagePath: "asset/card/05. Function/function_icebreakerstories.png", isDesertIsland: false),
+  TacticCard(id: "card_33", name: "Pitch Perfect", category: "Function", imagePath: "asset/card/05. Function/function_pitchperfect.png", isDesertIsland: true),
+  TacticCard(id: "card_34", name: "Simple Sales Stories", category: "Function", imagePath: "asset/card/05. Function/function_simplesalesstories.png", isDesertIsland: false),
+  TacticCard(id: "card_35", name: "Story-ish Conversations", category: "Function", imagePath: "asset/card/05. Function/function_story-ishconversations.png", isDesertIsland: false),
+  TacticCard(id: "card_36", name: "Downfall", category: "Structure", imagePath: "asset/card/06. Structure/structure_downfall.png", isDesertIsland: false),
+  TacticCard(id: "card_37", name: "Epic Fail", category: "Structure", imagePath: "asset/card/06. Structure/structure_epicfail.png", isDesertIsland: false),
+  TacticCard(id: "card_38", name: "Five Ts", category: "Structure", imagePath: "asset/card/06. Structure/structure_fivets.png", isDesertIsland: false),
+  TacticCard(id: "card_39", name: "Happy Ever Afters", category: "Structure", imagePath: "asset/card/06. Structure/structure_happyeverafters.png", isDesertIsland: false),
+  TacticCard(id: "card_40", name: "Innovation Curve", category: "Structure", imagePath: "asset/card/06. Structure/structure_innovationcurve.png", isDesertIsland: false),
+  TacticCard(id: "card_41", name: "Man in a Hole", category: "Structure", imagePath: "asset/card/06. Structure/structure_maninahole.png", isDesertIsland: true),
+  TacticCard(id: "card_42", name: "No Easy Way", category: "Structure", imagePath: "asset/card/06. Structure/structure_noeasyway.png", isDesertIsland: false),
+  TacticCard(id: "card_43", name: "Pride & Fall", category: "Structure", imagePath: "asset/card/06. Structure/structure_pride&fall.png", isDesertIsland: false),
+  TacticCard(id: "card_44", name: "Rags to Riches", category: "Structure", imagePath: "asset/card/06. Structure/structure_ragstoriches.png", isDesertIsland: false),
+  TacticCard(id: "card_45", name: "Voyage & Return", category: "Structure", imagePath: "asset/card/06. Structure/structure_voyage&return.png", isDesertIsland: false),
+  TacticCard(id: "card_46", name: "Leave it Out!", category: "Style", imagePath: "asset/card/07. Style/style_leaveitout.png", isDesertIsland: false),
+  TacticCard(id: "card_47", name: "Movie Time", category: "Style", imagePath: "asset/card/07. Style/style_movietime.png", isDesertIsland: true),
+  TacticCard(id: "card_48", name: "Rolls Royce Moment", category: "Style", imagePath: "asset/card/07. Style/style_rollsroycemoment.png", isDesertIsland: false),
+  TacticCard(id: "card_49", name: "Show & Tell", category: "Style", imagePath: "asset/card/07. Style/style_show&tell.png", isDesertIsland: false),
+  TacticCard(id: "card_50", name: "Story Hooks", category: "Style", imagePath: "asset/card/07. Style/style_storyhooks.png", isDesertIsland: false),
+  TacticCard(id: "card_51", name: "Three is the Magic Number", category: "Style", imagePath: "asset/card/07. Style/style_threeisthemagicnumber.png", isDesertIsland: false),
+  TacticCard(id: "card_52", name: "Audience Profile", category: "Organise", imagePath: "asset/card/08. Organise/organise_audienceprofile.png", isDesertIsland: false),
+  TacticCard(id: "card_53", name: "Big, Small, Inside, Outside", category: "Organise", imagePath: "asset/card/08. Organise/organise_big,small,inside,outside.png", isDesertIsland: false),
+  TacticCard(id: "card_54", name: "Story Bank", category: "Organise", imagePath: "asset/card/08. Organise/organise_storybank.png", isDesertIsland: true),
+];
