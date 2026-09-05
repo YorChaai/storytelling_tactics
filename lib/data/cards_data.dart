@@ -23,6 +23,37 @@ class TacticCard {
   String get imagePath => getImagePath();
 }
 
+const List<TacticCard> systemCards = [
+  TacticCard(
+    id: "sys_1",
+    name: "Cover & Introduction",
+    category: "System",
+    relativePath: "00.SystemStorytellerTactics/coverintroduction.png",
+    isDesertIsland: false,
+  ),
+  TacticCard(
+    id: "sys_2",
+    name: "Story Building System",
+    category: "System",
+    relativePath: "00.SystemStorytellerTactics/Story Building System.png",
+    isDesertIsland: false,
+  ),
+  TacticCard(
+    id: "sys_3",
+    name: "Pick a Card... Any Card",
+    category: "System",
+    relativePath: "00.SystemStorytellerTactics/Pickacard...anycard.png",
+    isDesertIsland: false,
+  ),
+  TacticCard(
+    id: "sys_4",
+    name: "Copyright & Legal",
+    category: "System",
+    relativePath: "00.SystemStorytellerTactics/copyrightlegal.png",
+    isDesertIsland: false,
+  ),
+];
+
 const List<TacticCard> allCards = [
   TacticCard(id: "card_2", name: "Stories that Connect", category: "Recipe", relativePath: "01. Recipe/recipe_storiesthatconnect.png", isDesertIsland: false),
   TacticCard(id: "card_3", name: "Stories that Convince", category: "Recipe", relativePath: "01. Recipe/recipe_storiesthatconvince.png", isDesertIsland: false),

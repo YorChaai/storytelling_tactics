@@ -1,9 +1,9 @@
 @echo off
-cd ..
+cd /d "%~dp0.."
 echo ==========================================
 echo MEMBANGUN APLIKASI WINDOWS (.exe)
 echo ==========================================
-call flutter build windows
+call flutter build windows --release
 echo.
 
 echo ==========================================

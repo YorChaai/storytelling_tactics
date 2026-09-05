@@ -1,29 +1,40 @@
 @echo off
-cd ..
+cd /d "%~dp0.."
 echo ==========================================
-echo PILIH PLATFORM UNTUK DIJALANKAN
+echo STORYTELLER TACTICS - PILIH PLATFORM
 echo ==========================================
 echo 1. Windows (Desktop)
 echo 2. Web (Browser Chrome)
 echo 3. Android (Emulator/Device)
 echo ==========================================
+set "platform="
 set /p platform="Masukkan pilihan Anda (1/2/3): "
 
-if "%platform%"=="1" (
-    echo.
-    echo Menjalankan di Windows...
-    call flutter run -d windows
-) else if "%platform%"=="2" (
-    echo.
-    echo Menjalankan di Web...
-    call flutter run -d chrome
-) else if "%platform%"=="3" (
-    echo.
-    echo Menjalankan di Android...
-    call flutter run
-) else (
-    echo.
-    echo Pilihan tidak valid!
-)
+if "%platform%"=="1" goto RUN_WIN
+if "%platform%"=="2" goto RUN_WEB
+if "%platform%"=="3" goto RUN_ANDROID
+echo.
+echo Pilihan tidak valid!
+goto END
 
+:RUN_WIN
+echo.
+echo Menjalankan di Windows...
+call flutter run -d windows
+goto END
+
+:RUN_WEB
+echo.
+echo Menjalankan di Web...
+call flutter run -d chrome
+goto END
+
+:RUN_ANDROID
+echo.
+echo Menjalankan di Android...
+call flutter run
+goto END
+
+:END
+echo.
 pause

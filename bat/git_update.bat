@@ -1,7 +1,7 @@
 @echo off
-cd ..
+cd /d "%~dp0.."
 echo ==========================================
-echo PERUBAHAN YANG DIBUAT1 (GIT DIFF):
+echo PERUBAHAN YANG DIBUAT (GIT DIFF):
 echo ==========================================
 git diff
 echo.

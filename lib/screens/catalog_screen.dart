@@ -15,7 +15,9 @@ class CatalogScreen extends StatelessWidget {
       itemCount: categories.length,
       itemBuilder: (context, index) {
         final category = categories[index];
-        final cardsInCategory = allCards.where((c) => c.category == category).toList();
+        final cardsInCategory = category == 'System'
+            ? systemCards
+            : allCards.where((c) => c.category == category).toList();
 
         if (cardsInCategory.isEmpty) return const SizedBox.shrink();
 
