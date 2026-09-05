@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../providers/settings_provider.dart';
 
 class AboutSystemScreen extends StatelessWidget {
   const AboutSystemScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final settings = context.watch<SettingsProvider>();
+    final basePath = settings.cardLanguage.basePath;
+
     final systemImages = [
-      "asset/card/00.SystemStorytellerTactics/coverintroduction.png",
-      "asset/card/00.SystemStorytellerTactics/Story Building System.png",
-      "asset/card/00.SystemStorytellerTactics/Pickacard...anycard.png",
-      "asset/card/00.SystemStorytellerTactics/copyrightlegal.png",
+      "$basePath/00.SystemStorytellerTactics/coverintroduction.png",
+      "$basePath/00.SystemStorytellerTactics/Story Building System.png",
+      "$basePath/00.SystemStorytellerTactics/Pickacard...anycard.png",
+      "$basePath/00.SystemStorytellerTactics/copyrightlegal.png",
     ];
 
     return ListView.builder(

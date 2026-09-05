@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../data/cards_data.dart';
+import '../providers/settings_provider.dart';
 import 'card_detail_dialog.dart';
 
 class TacticCardWidget extends StatelessWidget {
@@ -18,6 +20,9 @@ class TacticCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final settings = context.watch<SettingsProvider>();
+    final imagePath = card.getImagePath(settings.cardLanguage);
+
     return GestureDetector(
       onTap: isInteractive ? () {
         showDialog(
@@ -43,7 +48,7 @@ class TacticCardWidget extends StatelessWidget {
         child: AspectRatio(
           aspectRatio: 2100 / 1725,
           child: Image.asset(
-            card.imagePath,
+            imagePath,
             fit: BoxFit.contain,
             errorBuilder: (context, error, stackTrace) {
               return Container(
@@ -52,7 +57,7 @@ class TacticCardWidget extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      'Image not found:\n${card.imagePath}',
+                      'Image not found:\n$imagePath',
                       textAlign: TextAlign.center,
                       style: const TextStyle(color: Colors.white, fontSize: 10),
                     ),

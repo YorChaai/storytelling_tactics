@@ -8,10 +8,17 @@ import 'screens/recipe_screen.dart';
 import 'screens/desert_island_screen.dart';
 import 'screens/about_system_screen.dart';
 
+import 'providers/settings_provider.dart';
+import 'components/settings_dialog.dart';
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => GameSessionProvider(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => SettingsProvider()),
+        ChangeNotifierProvider(create: (_) => GameSessionProvider()),
+      ],
       child: const StorytellerApp(),
     ),
   );
@@ -66,6 +73,14 @@ class _MainLayoutState extends State<MainLayout> {
         title: const Text('Storyteller Tactics', style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: const Color(0xFF1E293B),
         elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings_outlined),
+            tooltip: 'Pengaturan',
+            onPressed: () => SettingsDialog.show(context),
+          ),
+          const SizedBox(width: 8),
+        ],
       ),
       body: _screens[_currentIndex],
       bottomNavigationBar: NavigationBar(

@@ -3,7 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter/gestures.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
+import 'package:provider/provider.dart';
 import '../data/cards_data.dart';
+import '../providers/settings_provider.dart';
 
 class FullscreenViewer extends StatefulWidget {
   final List<TacticCard> cards;
@@ -105,6 +107,7 @@ class _FullscreenViewerState extends State<FullscreenViewer> {
 
   @override
   Widget build(BuildContext context) {
+    final settings = context.watch<SettingsProvider>();
     return KeyboardListener(
       focusNode: _focusNode,
       autofocus: true,
@@ -177,7 +180,7 @@ class _FullscreenViewerState extends State<FullscreenViewer> {
                   },
                   builder: (context, index) {
                     return PhotoViewGalleryPageOptions(
-                      imageProvider: AssetImage(widget.cards[index].imagePath),
+                      imageProvider: AssetImage(widget.cards[index].getImagePath(settings.cardLanguage)),
                       filterQuality: FilterQuality.high,
                       initialScale: PhotoViewComputedScale.contained,
                       minScale: PhotoViewComputedScale.contained,

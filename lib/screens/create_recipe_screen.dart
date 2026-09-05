@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../data/cards_data.dart';
 import '../data/recipes_data.dart';
 import '../providers/game_session_provider.dart';
+import '../providers/settings_provider.dart';
 
 class CreateRecipeScreen extends StatefulWidget {
   const CreateRecipeScreen({super.key});
@@ -54,6 +55,7 @@ class _CreateRecipeScreenState extends State<CreateRecipeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final settings = context.watch<SettingsProvider>();
     // Exclude system and recipe cards from being selectable as ingredients
     final selectableCards = allCards.where((c) => !c.id.startsWith('card_0_')).toList();
 
@@ -174,7 +176,7 @@ class _CreateRecipeScreenState extends State<CreateRecipeScreen> {
                                     ),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: Image.asset(card.imagePath, fit: BoxFit.contain),
+                                      child: Image.asset(card.getImagePath(settings.cardLanguage), fit: BoxFit.contain),
                                     ),
                                   ),
                                   if (isSelected)

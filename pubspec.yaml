@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   provider: ^6.1.5+1
   photo_view: ^0.15.0
+  shared_preferences: ^2.5.5
 
 dev_dependencies:
   flutter_test:
@@ -61,15 +62,24 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - asset/card/00.SystemStorytellerTactics/
-    - asset/card/01. Recipe/
-    - asset/card/02. Concept/
-    - asset/card/03. Explore/
-    - asset/card/04. charater/
-    - asset/card/05. Function/
-    - asset/card/06. Structure/
-    - asset/card/07. Style/
-    - asset/card/08. Organise/
+    - asset/card/eng/00.SystemStorytellerTactics/
+    - asset/card/eng/01. Recipe/
+    - asset/card/eng/02. Concept/
+    - asset/card/eng/03. Explore/
+    - asset/card/eng/04. charater/
+    - asset/card/eng/05. Function/
+    - asset/card/eng/06. Structure/
+    - asset/card/eng/07. Style/
+    - asset/card/eng/08. Organise/
+    - asset/card/ind/00.SystemStorytellerTactics/
+    - asset/card/ind/01. Recipe/
+    - asset/card/ind/02. Concept/
+    - asset/card/ind/03. Explore/
+    - asset/card/ind/04. charater/
+    - asset/card/ind/05. Function/
+    - asset/card/ind/06. Structure/
+    - asset/card/ind/07. Style/
+    - asset/card/ind/08. Organise/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

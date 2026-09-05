@@ -1,0 +1,5 @@
+disini saya mau tambahin fitur saat sudha mode zoom gitu ada zoom in dan zoom out cuman fiturnya itu ribet saya jelasin disini file ini
+"
+D:\Aplikasi\fileexplore
+"
+saya sempat bikin fitur zoom in zoom out yang mirip kaya gallexy dari saat di swap atau pindah gitu dimana saya mau kamu mirip kaya gini tetap jng ubah kodingan dulu
