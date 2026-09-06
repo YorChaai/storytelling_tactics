@@ -30,7 +30,7 @@ class StorytellerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'YORSTORY',
+      title: 'YorStory',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
@@ -78,10 +78,14 @@ class _MainLayoutState extends State<MainLayout> {
               height: 36,
               width: 36,
               fit: BoxFit.contain,
-              errorBuilder: (context, error, stackTrace) => const SizedBox.shrink(),
+              errorBuilder: (context, error, stackTrace) =>
+                  const SizedBox.shrink(),
             ),
             const SizedBox(width: 10),
-            const Text('Storyteller Tactics', style: TextStyle(fontWeight: FontWeight.bold)),
+            const Text(
+              'Storyteller Tactics',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ],
         ),
         backgroundColor: const Color(0xFF1E293B),
@@ -109,7 +113,10 @@ class _MainLayoutState extends State<MainLayout> {
           NavigationDestination(icon: Icon(Icons.info), label: 'Info'),
           NavigationDestination(icon: Icon(Icons.grid_view), label: 'Catalog'),
           NavigationDestination(icon: Icon(Icons.shuffle), label: 'Draw'),
-          NavigationDestination(icon: Icon(Icons.auto_stories), label: '3 Stories'),
+          NavigationDestination(
+            icon: Icon(Icons.auto_stories),
+            label: '3 Stories',
+          ),
           NavigationDestination(icon: Icon(Icons.menu_book), label: 'Recipe'),
           NavigationDestination(icon: Icon(Icons.sailing), label: 'Island'),
         ],
