@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../data/cards_data.dart';
 import '../providers/settings_provider.dart';
-import 'card_detail_dialog.dart';
+import 'fullscreen_viewer.dart';
 
 class TacticCardWidget extends StatelessWidget {
   final TacticCard card;
@@ -27,7 +27,7 @@ class TacticCardWidget extends StatelessWidget {
       onTap: isInteractive ? () {
         showDialog(
           context: context,
-          builder: (context) => CardDetailDialog(
+          builder: (context) => FullscreenViewer(
             cards: contextCards ?? [card],
             initialIndex: index ?? 0,
           ),

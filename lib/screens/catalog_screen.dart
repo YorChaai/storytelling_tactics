@@ -8,16 +8,14 @@ class CatalogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // We don't need active session data here, just all cards
-    final categories = ['System', 'Recipe', 'Concept', 'Explore', 'Character', 'Function', 'Structure', 'Style', 'Organise'];
+    final categories = ['Recipe', 'Concept', 'Explore', 'Character', 'Function', 'Structure', 'Style', 'Organise'];
 
     return ListView.builder(
       padding: const EdgeInsets.all(16),
       itemCount: categories.length,
       itemBuilder: (context, index) {
         final category = categories[index];
-        final cardsInCategory = category == 'System'
-            ? systemCards
-            : allCards.where((c) => c.category == category).toList();
+        final cardsInCategory = allCards.where((c) => c.category == category).toList();
 
         if (cardsInCategory.isEmpty) return const SizedBox.shrink();
 

@@ -30,7 +30,7 @@ class StorytellerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Storyteller Tactics',
+      title: 'YORSTORY',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
@@ -70,7 +70,20 @@ class _MainLayoutState extends State<MainLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Storyteller Tactics', style: TextStyle(fontWeight: FontWeight.bold)),
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'asset/Logo/LogoApps.jpg',
+              height: 36,
+              width: 36,
+              fit: BoxFit.contain,
+              errorBuilder: (context, error, stackTrace) => const SizedBox.shrink(),
+            ),
+            const SizedBox(width: 10),
+            const Text('Storyteller Tactics', style: TextStyle(fontWeight: FontWeight.bold)),
+          ],
+        ),
         backgroundColor: const Color(0xFF1E293B),
         elevation: 0,
         actions: [
